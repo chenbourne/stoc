@@ -41,14 +41,23 @@ down/
 
 ## 怎么下（按顺序）
 
-在 `stoc` 目录下：
+在 `down` 目录下（仓库里已带好 `manifest.tsv` / `login_urls.tsv`）：
 
 ```bash
-cd /Users/chenjing/work/stoc/down
-python3 build_manifest.py          # 生成 manifest.tsv + login_urls.tsv
+cd down   # 或 /data2/stoc/down 等你的实际路径
+# 一般不用再跑 build_manifest.py；清单已在仓库里
 python3 download_ae.py             # 批次 A，体积小、可全自动
-python3 download_geo.py            # 批次 E，最大；可先 --limit 3 试跑
+python3 download_geo.py --limit 3  # 批次 E 先试跑
+python3 download_geo.py            # 批次 E 全量
 python3 download_login.py          # 打印 B/C/D 清单，不自动拉登录墙文件
+```
+
+若要**重新生成**清单，需要本机有 `enrich_all.json`（未推到 GitHub，约数 MB）：
+
+```bash
+# 把 enrich_all.json 放到 down/ 同级，或指定路径：
+python3 build_manifest.py --json /path/to/enrich_all.json
+# 或：STOC_ENRICH_JSON=/path/to/enrich_all.json python3 build_manifest.py
 ```
 
 GEO 试跑 3 个：

@@ -10,9 +10,32 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-JSON_PATH = ROOT.parent / "enrich_all.json"
 OUT = ROOT / "manifest.tsv"
 LOGIN_OUT = ROOT / "login_urls.tsv"
+
+
+def resolve_json_path() -> Path:
+    """Prefer CLI/env, then common local layouts."""
+    import argparse
+    import os
+
+    ap = argparse.ArgumentParser(add_help=False)
+    ap.add_argument("--json", default=os.environ.get("STOC_ENRICH_JSON", ""))
+    args, _ = ap.parse_known_args()
+    candidates = []
+    if args.json:
+        candidates.append(Path(args.json))
+    candidates.extend(
+        [
+            ROOT.parent / "enrich_all.json",  # .../stoc/enrich_all.json next to down/
+            ROOT / "enrich_all.json",  # .../down/enrich_all.json
+            Path.cwd() / "enrich_all.json",
+        ]
+    )
+    for p in candidates:
+        if p and p.is_file():
+            return p
+    return candidates[0] if candidates else ROOT.parent / "enrich_all.json"
 
 KEEP_LEVELS = {"Level 2", "Level 1+2"}
 # kinds that can hold processed matrices in this cohort
@@ -31,9 +54,23 @@ def default_page(kind: str, acc: str) -> str:
 
 
 def main() -> None:
-    if not JSON_PATH.exists():
-        sys.exit(f"missing {JSON_PATH}")
-    papers = json.loads(JSON_PATH.read_text())
+    json_path = resolve_json_path()
+    if not json_path.exists():
+        tip = ""
+        if OUT.exists():
+            tip = (
+                f"\n\nNote: {OUT.name} already exists in this folder. "
+                "You do NOT need enrich_all.json to download — just run:\n"
+                "  python3 download_ae.py\n"
+                "  python3 download_geo.py --limit 3\n"
+                "  python3 download_login.py\n"
+                "Only re-run build_manifest.py when regenerating the list, e.g.\n"
+                "  STOC_ENRICH_JSON=/path/to/enrich_all.json python3 build_manifest.py\n"
+                "  python3 build_manifest.py --json /path/to/enrich_all.json"
+            )
+        sys.exit(f"missing {json_path}{tip}")
+    print(f"using {json_path}")
+    papers = json.loads(json_path.read_text())
 
     # accession -> linked STDS (for CNP skip)
     cnp_to_stds: dict[str, set[str]] = defaultdict(set)
