@@ -1,0 +1,22 @@
+accession	page_url	dest_dir	n_papers	dois	file_level
+STDS0000018	https://db.cngb.org/stomics/datasets/STDS0000018	data/STDS/STDS0000018	1	10.1101/gr.280584.125	Level 2
+STDS0000021	https://db.cngb.org/stomics/datasets/STDS0000021	data/STDS/STDS0000021	1	10.1101/gr.280584.125	Level 2
+STDS0000052	https://db.cngb.org/stomics/datasets/STDS0000052	data/STDS/STDS0000052	1	10.1101/gr.280584.125	Level 2
+STDS0000056	https://db.cngb.org/stomics/datasets/STDS0000056	data/STDS/STDS0000056	3	10.1016/j.crmeth.2026.101373; 10.1093/bib/bbaf644; 10.1371/journal.pcbi.1014346	Level 2
+STDS0000057	https://db.cngb.org/stomics/datasets/STDS0000057	data/STDS/STDS0000057	3	10.1038/s41467-023-37168-7; 10.1093/nar/gkaf1484; 10.1371/journal.pcbi.1013354	Level 2
+STDS0000058	https://db.cngb.org/stomics/datasets/STDS0000058	data/STDS/STDS0000058	23	10.1016/j.cell.2022.10.021; 10.1038/s41420-023-01569-w; 10.1038/s41467-023-40155-7; 10.1038/s41467-023-42343-x; 10.1038/s41467-023-44367-9; 10.1038/s41467-025-61476-9; 10.1038/s41467-025-64867-0; 10.1038/s41586-025-08757-x; 10.1038/s41592-024-02463-8; 10.1038/s42003-025-07965-5; 10.1038/s42003-025-08015-w; 10.1038/s42003-025-08502-0; 10.1038/s42003-026-09841-2; 10.1093/bib/bbaf644; 10.1093/bioinformatics/btae466; 10.1093/gigascience/giad097; 10.1093/gigascience/giae042; 10.1093/nar/gkad801; 10.1093/nar/gkad933; 10.1101/gr.280532.125; 10.1186/s13059-025-03697-1; 10.1186/s13059-025-03895-x; 10.3390/cells12040604	Level 2
+STDS0000060	https://db.cngb.org/stomics/datasets/STDS0000060	data/STDS/STDS0000060	1	10.1038/s41467-024-51935-0	Level 2
+STDS0000062	https://db.cngb.org/stomics/datasets/STDS0000062	data/STDS/STDS0000062	1	10.3389/fgene.2022.858808	Level 2
+STDS0000104	https://db.cngb.org/stomics/datasets/STDS0000104	data/STDS/STDS0000104	1	10.1038/s41598-026-44501-9	Level 2
+STDS0000139	https://db.cngb.org/stomics/datasets/STDS0000139	data/STDS/STDS0000139	1	10.3389/fcell.2022.878346	Level 2
+STDS0000140	https://db.cngb.org/stomics/datasets/STDS0000140	data/STDS/STDS0000140	1	10.1038/s41467-022-34413-3	Level 2
+STDS0000149	https://db.cngb.org/stomics/datasets/STDS0000149	data/STDS/STDS0000149	1	10.1093/bioinformatics/btae663	Level 2
+STDS0000172	https://db.cngb.org/stomics/datasets/STDS0000172	data/STDS/STDS0000172	1	10.1002/imt2.70084	Level 2
+STDS0000218	https://db.cngb.org/stomics/datasets/STDS0000218	data/STDS/STDS0000218	1	10.1101/gr.280584.125	Level 2
+STDS0000227	https://db.cngb.org/stomics/datasets/STDS0000227	data/STDS/STDS0000227	1	10.1038/s42003-024-07037-0	Level 2
+STDS0000234	https://db.cngb.org/stomics/datasets/STDS0000234	data/STDS/STDS0000234	1	10.1186/s13059-025-03630-6	Level 2
+STDS0000242	https://db.cngb.org/stomics/datasets/STDS0000242	data/STDS/STDS0000242	1	10.1038/s41467-025-62793-9	Level 2
+STDS0000243	https://db.cngb.org/stomics/datasets/STDS0000243	data/STDS/STDS0000243	1	10.1038/s41422-026-01246-4	Level 2
+STDS0000249	https://db.cngb.org/stomics/datasets/STDS0000249	data/STDS/STDS0000249	1	10.1038/s41467-025-67492-z	Level 2
+STDS0000377	https://db.cngb.org/stomics/datasets/STDS0000377	data/STDS/STDS0000377	1	10.1073/pnas.2511701122	Level 2
+STDS0000390	https://db.cngb.org/stomics/datasets/STDS0000390	data/STDS/STDS0000390	1	10.1126/sciadv.aed1407	Level 2

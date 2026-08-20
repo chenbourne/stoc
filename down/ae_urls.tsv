@@ -1,0 +1,7 @@
+accession	page_url	dest_dir	n_papers	dois	file_format	file_level
+E-MTAB-11115	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11115	data/AE/E-MTAB-11115	1	10.1038/s41467-025-64867-0	processed .tar.gz (BioStudies Files)	Level 2
+E-MTAB-11720	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11720	data/AE/E-MTAB-11720	1	10.1038/s41556-025-01838-z	FASTQ (ArrayExpress FTP; not listed on BioStudies Files)	Level 1+2
+E-MTAB-14121	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-14121	data/AE/E-MTAB-14121	1	10.1126/sciadv.adz1519	processed .tar.gz (BioStudies Files)	Level 2
+E-MTAB-6149	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-6149	data/AE/E-MTAB-6149	1	10.1038/s41467-023-44560-w	processed .tar.gz (BioStudies Files)	Level 2
+E-MTAB-7407	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-7407	data/AE/E-MTAB-7407	1	10.1038/s41422-021-00540-7	processed .tar.gz (BioStudies Files)	Level 2
+E-MTAB-8107	https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-8107	data/AE/E-MTAB-8107	1	10.1038/s41467-023-44560-w	processed .tar.gz (BioStudies Files)	Level 2
