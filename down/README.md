@@ -106,10 +106,17 @@ python3 download_geo.py --acc GSE123456
 
 `https://ftp.ncbi.nlm.nih.gov/geo/series/GSE{block}nnn/{GSE}/suppl/`
 
-白名单：`.h5ad .h5 .hdf5 .mtx .mtx.gz .rds .rda .gef .csv.gz` 及 processed zip（文件名含 processed/matrix）。  
-黑名单：`fastq`、`fq.gz`、`_RAW.tar`、`.sra`、`.bam`。
+**默认：suppl 里有什么下什么**（含 `.txt.gz` / `.xlsx` / `.tar.gz` / `_RAW.tar` 等），已存在文件会跳过。
 
-并发默认 1（NCBI 易限速）；失败会写入 `log/geo_fail.tsv`。
+```bash
+python3 download_geo.py --missing-only   # 只补还没有文件的 GSE（推荐）
+python3 download_geo.py                  # 全量（已有文件 resume）
+python3 download_geo.py --skip-raw       # 全要但跳过 RAW.tar/fastq/bam
+python3 download_geo.py --processed-only # 旧规则：只要 h5/mtx/rds…
+```
+
+注意：`_RAW.tar` 可能非常大；磁盘不够再用 `--skip-raw`。  
+失败写入 `log/geo_fail.tsv`（部分坏 accession 会 404）。
 
 ## 校验
 
