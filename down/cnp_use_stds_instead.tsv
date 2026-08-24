@@ -1,0 +1,5 @@
+accession	page_url	skip_reason	dest_hint
+CNP0000927	https://db.cngb.org/data_resources/project/CNP0000927/	linked_STDS_already_in_batch_B:STDS0000140	data/STDS/STDS0000140
+CNP0001543	https://db.cngb.org/data_resources/project/CNP0001543/	linked_STDS_already_in_batch_B:STDS0000058	data/STDS/STDS0000058
+CNP0002068	https://db.cngb.org/data_resources/project/CNP0002068/	linked_STDS_already_in_batch_B:STDS0000056	data/STDS/STDS0000056
+CNP0002590	https://db.cngb.org/data_resources/project/CNP0002590/	linked_STDS_already_in_batch_B:STDS0000062	data/STDS/STDS0000062
