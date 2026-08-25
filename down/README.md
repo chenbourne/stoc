@@ -17,7 +17,8 @@
 | D | CNP | ~47，其中已挂 STDS 的可跳过 | 登录 CNGBdb，只要矩阵 |
 | E | GEO (`GSE`) | ~199 | 脚本拉 suppl，后缀过滤 |
 
-不在本次：CRA / HRA / PRJNA（一级测序）、OMIX（格式未核实）。
+不在首次批次：CRA / HRA / PRJNA（多为一级测序）。  
+**OMIX**：元信息里有 11 个；其中 **6 个 Open-access 可 HTTPS 直链**（见 `omix_direct.tsv`），用 `download_omix.py`；其余需申请/受控。
 
 ## 目录约定
 
@@ -50,6 +51,7 @@ python3 download_ae.py             # 批次 A，体积小、可全自动
 python3 download_geo.py --limit 3  # 批次 E 先试跑
 python3 download_geo.py            # 批次 E 全量
 python3 download_login.py          # 打印 B/C/D 清单，不自动拉登录墙文件
+python3 download_omix.py           # OMIX 开放获取（6 个，HTTPS）
 ```
 
 若要**重新生成**清单，需要本机有 `enrich_all.json`（未推到 GitHub，约数 MB）：
